@@ -1,1 +1,1 @@
-Clicking practice/about.html's "java/index.html/" link results in "Cannot GET /practice/java/index.html"
+Should I be using index.html instead of about.html?
