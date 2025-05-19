@@ -2,7 +2,7 @@
 
 # if (there are no path-like arguments to ls)
   if pwd | grep .issue-tracker > /dev/null; then
-    for directory in $(find . -maxdepth 1 -type d -regex '\./[0-9]+' -printf "%f\n"); do
+    for directory in $(find . -maxdepth 1 -type d -regex '\./[0-9]+' -printf "%f\n" | sort -n); do
       if [ -e $directory/title.txt ]; then
         printf '%5s %s\n' $directory "$(cat $directory/title.txt)"
       else
