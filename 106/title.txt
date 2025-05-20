@@ -1,0 +1,1 @@
+Document the work-flow and configuration required to get IntelliJ Idea compiling and running all tests in practice/java/
