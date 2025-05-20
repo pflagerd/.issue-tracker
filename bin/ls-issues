@@ -1,4 +1,10 @@
 #!/bin/bash
 pushd $(cd $(dirname "$(dirname "${BASH_SOURCE[0]}")") && pwd) >/dev/null
-./bin/ls
+    for directory in $(find . -maxdepth 1 -type d -regex '\./[0-9]+' -printf "%f\n" | sort -n); do
+        if [ -e $directory/title.txt ]; then
+        printf '%5s %s\n' $directory "$(cat $directory/title.txt)"
+        else
+        echo "CANNOT FIND $directory/title.txt"
+        fi
+    done
 popd >/dev/null
