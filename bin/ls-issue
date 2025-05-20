@@ -1,0 +1,4 @@
+#!/bin/bash
+pushd $(cd $(dirname "$(dirname "${BASH_SOURCE[0]}")") && pwd) >/dev/null
+./bin/ls
+popd >/dev/null
